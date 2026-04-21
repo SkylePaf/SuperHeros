@@ -305,7 +305,7 @@ void handle_links(cJSON *json) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Animation de chargement                                            */
+/*  Animation de chargement   non-utilisée                            */
 /* ------------------------------------------------------------------ */
 
 void loader(void) {
