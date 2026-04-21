@@ -81,7 +81,7 @@ int *sort_heros_acc_to_stat(cJSON *json, char *stat_name, int current_hero_count
 /* ------------------------------------------------------------------ */
 
 void display_from_ids(int *ids_arr, int size_of_arr, char *stat_name, cJSON *json, int filtered) {
-    system("clear");
+    system("cls");
 
     for (int i = 0; i < size_of_arr; i++) {
 
@@ -136,7 +136,7 @@ void handle_sort_heros(cJSON *json) {
     char choix[100];
     int nmb_of_heros = cJSON_GetArraySize(json);
 
-    system("clear");
+    system("cls");
     printf("\n\n");
 
     while (1) {
@@ -155,7 +155,7 @@ void handle_sort_heros(cJSON *json) {
 
         printf(GREEN "Press any key to skip." RESET);
         wait_enter();
-        system("clear");
+        system("cls");
     }
 }
 

@@ -72,7 +72,7 @@
 		"hairColor":	"Brown"
 	}, {
 		"id":	4,
-		"name":	"Wonder Woman",
+		"name":	"WonderWoman",
 		"id-api":	720,
 		"slug":	"720-wonder-woman",
 		"powerstats":	{
@@ -96,7 +96,7 @@
 		"hairColor":	"Black"
 	}, {
 		"id":	5,
-		"name":	"Iron Man",
+		"name":	"IronMan",
 		"id-api":	346,
 		"slug":	"346-iron-man",
 		"powerstats":	{
@@ -120,7 +120,7 @@
 		"hairColor":	"Black"
 	}, {
 		"id":	6,
-		"name":	"Captain America",
+		"name":	"CaptainAmerica",
 		"id-api":	149,
 		"slug":	"149-captain-america",
 		"powerstats":	{
@@ -216,7 +216,7 @@
 		"hairColor":	"Black"
 	}, {
 		"id":	10,
-		"name":	"Black Widow",
+		"name":	"BlackWidow",
 		"id-api":	107,
 		"slug":	"107-black-widow",
 		"powerstats":	{
@@ -240,11 +240,11 @@
 		"hairColor":	"Auburn"
 	}, {
 		"id":	11,
-		"name":	"The Flash",
+		"name":	"TheFlash",
 		"id-api":	267
 	}, {
 		"id":	12,
-		"name":	"Silver Surfer",
+		"name":	"SilverSurfer",
 		"id-api":	598,
 		"slug":	"598-silver-surfer",
 		"powerstats":	{
@@ -292,7 +292,7 @@
 		"hairColor":	"Blond"
 	}, {
 		"id":	14,
-		"name":	"Black Panther",
+		"name":	"BlackPanther",
 		"id-api":	106,
 		"slug":	"106-black-panther",
 		"powerstats":	{
@@ -316,7 +316,7 @@
 		"hairColor":	"Black"
 	}, {
 		"id":	15,
-		"name":	"Doctor Strange",
+		"name":	"DoctorStrange",
 		"id-api":	226,
 		"slug":	"226-doctor-strange",
 		"powerstats":	{

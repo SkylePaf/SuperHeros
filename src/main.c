@@ -25,7 +25,7 @@
 /* ------------------------------------------------------------------ */
 
 static void print_menu(void) {
-    system("clear");
+    system("cls");   // "clear fontionne sur linux mais pas sur micrsoft : pour microsoft, il faut "cls".
     printf(YELLOW_BOLD "[==========------------------------------------==========]\n" RESET);
     printf(BLUE_BOLD "\n");
     printf("            You are in the SuperHero DATA-BASE.\n");

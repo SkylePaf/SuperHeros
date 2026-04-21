@@ -33,7 +33,7 @@ void handle_quiz(cJSON *json) {
         char *name     = cJSON_GetObjectItem(hero, "name")->valuestring;
         cJSON *ps      = cJSON_GetObjectItem(hero, "powerstats");
 
-        system("clear");
+        system("cls");
         printf(YELLOW_BOLD "\n[==========------- Question %d / %d -------==========]\n\n" RESET,
                q + 1, NB_QUESTIONS);
         printf(CYAN "     Powerstats of the mystery hero :\n\n" RESET);
@@ -68,7 +68,7 @@ void handle_quiz(cJSON *json) {
     }
 
     /* Résultats finaux */
-    system("clear");
+    system("cls");
     printf("\n");
     printf(YELLOW_BOLD "[==========------------Quiz Results------------==========]\n" RESET);
     printf(CYAN "\n     Your final score : " RESET BLUE_BOLD "%d / %d\n\n" RESET,

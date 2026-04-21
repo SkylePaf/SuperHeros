@@ -19,7 +19,7 @@
 /* ------------------------------------------------------------------ */
 
 void print_basic_info(cJSON *json) {
-    system("clear");
+    system("cls");
 
     for (int i = 0; i < cJSON_GetArraySize(json); i++) {
         cJSON *hero       = cJSON_GetArrayItem(json, i);
@@ -73,7 +73,7 @@ void print_all_info(cJSON *hero) {
     cJSON *hairColor   = cJSON_GetObjectItem(appearance, "hairColor");
 
     /* --- Affichage --- */
-    system("clear");
+    system("cls");
     printf("\n");
 
     printf(YELLOW_BOLD "[==========--------------Headers---------------==========]" RESET "\n");
@@ -122,7 +122,7 @@ void print_all_info(cJSON *hero) {
 int get_hero_by_ID(cJSON *json) {
     int id_asked = 0;
 
-    system("clear");
+    system("cls");
     printf("\n\n");
 
     while (id_asked != -1) {
@@ -141,7 +141,7 @@ int get_hero_by_ID(cJSON *json) {
             }
         }
 
-        system("clear");
+        system("cls");
         printf(RED "ERROR : Hero at ID %d does not exist !\n\n" RESET, id_asked);
     }
     return 0;
@@ -150,7 +150,7 @@ int get_hero_by_ID(cJSON *json) {
 int get_hero_by_name(cJSON *json) {
     char name_asked[100];
 
-    system("clear");
+    system("cls");
     printf("\n\n");
 
     while (1) {
@@ -171,7 +171,7 @@ int get_hero_by_name(cJSON *json) {
             }
         }
 
-        system("clear");
+        system("cls");
         printf(RED "ERROR : Hero '%s' does not exist !\n\n" RESET, name_asked);
     }
     return 0;
@@ -184,7 +184,7 @@ int get_hero_by_name(cJSON *json) {
 void compare_heroes(cJSON *json) {
     int id1, id2;
 
-    system("clear");
+    system("cls");
     printf("\n\n");
 
     printf(CYAN_BOLD "- Entrez l'ID du premier hero :" RESET GREEN "\n>>> " RESET);
@@ -207,7 +207,7 @@ void compare_heroes(cJSON *json) {
     }
 
     if (hero1 == NULL || hero2 == NULL) {
-        system("clear");
+        system("cls");
         printf(RED "\nERROR : One of the heroes does not exist !\n\n" RESET);
         printf(GREEN_BOLD "Press any key to leave." RESET);
         wait_enter();
@@ -221,7 +221,7 @@ void compare_heroes(cJSON *json) {
 
     char *stats[] = {"intelligence", "strength", "speed", "durability", "power", "combat"};
 
-    system("clear");
+    system("cls");
     printf("\n");
     printf(YELLOW_BOLD "[==========-------------Comparison-------------==========]\n" RESET);
     printf(CYAN "     %-20s %-15s %-15s\n" RESET, "STAT", name1, name2);
@@ -252,7 +252,7 @@ void compare_heroes(cJSON *json) {
 /* ------------------------------------------------------------------ */
 
 void handle_links(cJSON *json) {
-    system("clear");
+    system("cls");
     printf("\n\n");
 
     while (1) {
@@ -273,7 +273,7 @@ void handle_links(cJSON *json) {
         }
 
         if (found_hero == NULL) {
-            system("clear");
+            system("cls");
             printf(RED "ERROR : Hero at ID %d does not exist !\n\n" RESET, id_asked);
             continue;
         }
@@ -288,7 +288,7 @@ void handle_links(cJSON *json) {
             if (wiki_name[i] == ' ') wiki_name[i] = '_';
         }
 
-        system("clear");
+        system("cls");
         printf("\n");
         printf(YELLOW_BOLD "[==========----------- Links for %s -----------==========]\n\n" RESET, name);
         printf(CYAN "     Wikipedia     : " RESET BLUE "https://en.wikipedia.org/wiki/%s\n" RESET, wiki_name);
@@ -299,7 +299,7 @@ void handle_links(cJSON *json) {
         printf(GREEN_BOLD "\nPress any key to continue." RESET);
         wait_enter();
 
-        system("clear");
+        system("cls");
         printf("\n\n");
     }
 }
@@ -312,7 +312,7 @@ void loader(void) {
     char *loading_message[] = {"Loading", "Loading.", "Loading..", "Loading..."};
     int count = 4;
     for (int i = 0; i < count; i++) {
-        system("clear");
+        system("cls");
         printf("%s\n", loading_message[i]);
         fflush(stdout);
         sleep(1);
