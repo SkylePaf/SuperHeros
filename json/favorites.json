@@ -1,0 +1,49 @@
+[{
+		"id":	9,
+		"name":	"Wolverine",
+		"id-api":	717,
+		"slug":	"717-wolverine",
+		"powerstats":	{
+			"intelligence":	63,
+			"strength":	32,
+			"speed":	50,
+			"durability":	100,
+			"power":	89,
+			"combat":	100
+		},
+		"appearance":	{
+			"gender":	"Male",
+			"race":	"Mutant",
+			"height":	["5'3", "160 cm"],
+			"weight":	["300 lb", "135 kg"],
+			"eyeColor":	"Blue",
+			"hairColor":	"Black"
+		},
+		"weight":	["300 lb", "135 kg"],
+		"eyeColor":	"Blue",
+		"hairColor":	"Black"
+	}, {
+		"id":	4,
+		"name":	"Wonder Woman",
+		"id-api":	720,
+		"slug":	"720-wonder-woman",
+		"powerstats":	{
+			"intelligence":	88,
+			"strength":	100,
+			"speed":	79,
+			"durability":	100,
+			"power":	100,
+			"combat":	100
+		},
+		"appearance":	{
+			"gender":	"Female",
+			"race":	"Amazon",
+			"height":	["6'0", "183 cm"],
+			"weight":	["165 lb", "74 kg"],
+			"eyeColor":	"Blue",
+			"hairColor":	"Black"
+		},
+		"weight":	["165 lb", "74 kg"],
+		"eyeColor":	"Blue",
+		"hairColor":	"Black"
+	}]
