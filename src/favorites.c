@@ -49,7 +49,7 @@ void handle_favorites(cJSON *json) {
     cJSON *fav_json = load_favorites_json();
 
     while (1) {
-        system("clear");
+        system("cls");
         printf("\n");
         printf(YELLOW_BOLD "[==========-------------Favorites--------------==========]\n" RESET);
         printf(CYAN "\n     Your favorites :\n\n" RESET);
