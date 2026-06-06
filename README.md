@@ -1,62 +1,62 @@
 # SuperHero DataBase
 
-> Gérez, explorez et testez vos connaissances sur l'univers des super-héros.
+> Manage, explore and test your knowledge of the superhero universe.
 
-**Recherche · Tri · Filtrage · Comparaison · Favoris · Quiz**  
-Développé entièrement en C - sans framework, sans base de données externe.
+**Search · Sort · Filter · Compare · Favorites · Quiz**  
+Built entirely in C — no framework, no external database.
 
-*Projet de L1 réalisé avec **userremi0**.*
+*L1 project built with **userremi0**.*
 
 ---
 
-## Fonctionnalités
+## Features
 
-- **Affichage** — vue simplifiée ou détaillée de tous les héros de la base
-- **Recherche** — par ID ou par nom (insensible à la casse)
-- **Tri** — classement des héros selon n'importe quelle powerstat (intelligence, strength, speed…)
-- **Filtrage multi-critères** — garder uniquement les héros dont une stat est ≥ ou ≤ à un seuil
-- **Comparaison** — deux héros côte à côte, la meilleure stat mise en vert
-- **Favoris** — ajout / suppression / sauvegarde persistante dans un fichier JSON
-- **Quiz** — 5 questions, deviner le héros à partir de ses powerstats, score sur 50
-- **Liens externes** — Wikipedia, SuperHeroDB et IMDb pour chaque héros
+- **Display** — simplified or detailed view of all heroes in the database
+- **Search** — by ID or by name (case-insensitive)
+- **Sort** — rank heroes by any powerstat (intelligence, strength, speed…)
+- **Multi-criteria filter** — keep only heroes where a stat is ≥ or ≤ a threshold
+- **Compare** — two heroes side by side, the best stat highlighted in green
+- **Favorites** — add / remove / persistent save to a JSON file
+- **Quiz** — 5 questions, guess the hero from powerstats, score out of 50
+- **External links** — Wikipedia, SuperHeroDB and IMDb for each hero
 
 ---
 
 ## Architecture
 
-Aucun moteur. Aucune dépendance externe (sauf cJSON intégré au projet).
+No engine. No external dependencies (except cJSON bundled in the project).
 
 ```
 ├── build/
-│   ├── main                    # binaire Linux
-│   └── main.exe                # binaire Windows
+│   ├── main                    # Linux binary
+│   └── main.exe                # Windows binary
 ├── include/
-│   ├── cJSON.h                 # parseur JSON léger
-│   ├── colors.h                # macros ANSI pour l'affichage coloré
-│   ├── utils.h                 # lecture/écriture de fichiers, helpers
-│   ├── heroes.h                # affichage, recherche, comparaison, liens
-│   ├── filter.h                # tri et filtrage
-│   ├── favorites.h             # gestion des favoris
-│   └── quiz.h                  # quiz interactif
+│   ├── cJSON.h                 # lightweight JSON parser
+│   ├── colors.h                # ANSI macros for colored output
+│   ├── utils.h                 # file read/write, helpers
+│   ├── heroes.h                # display, search, comparison, links
+│   ├── filter.h                # sorting and filtering
+│   ├── favorites.h             # favorites management
+│   └── quiz.h                  # interactive quiz
 ├── json/
-│   ├── DATA.json               # base de données des 16 héros
-│   └── favorites.json          # favoris sauvegardés par l'utilisateur
+│   ├── DATA.json               # 16-hero database
+│   └── favorites.json          # user-saved favorites
 ├── src/
-│   ├── main.c                  # point d'entrée, menu principal
-│   ├── utils.c                 # fichiers, conversion, saisie
-│   ├── heroes.c                # affichage, recherche, comparaison, liens
-│   ├── filter.c                # tri, filtrage interactif
-│   ├── favorites.c             # gestion des favoris
-│   ├── quiz.c                  # quiz : deviner le héros
-│   └── cJSON.c                 # parseur JSON
-├── build.sh                    # compilation du projet
-├── launch.sh                   # lancement du binaire
+│   ├── main.c                  # entry point, main menu
+│   ├── utils.c                 # files, conversion, input
+│   ├── heroes.c                # display, search, comparison, links
+│   ├── filter.c                # sorting, interactive filtering
+│   ├── favorites.c             # favorites management
+│   ├── quiz.c                  # quiz: guess the hero
+│   └── cJSON.c                 # JSON parser
+├── build.sh                    # project build
+├── launch.sh                   # binary launcher
 └── all.sh                      # build + launch
 ```
 
-Le programme charge un fichier JSON contenant 16 super-héros avec leurs powerstats et apparence. Toutes les opérations (tri, filtrage, quiz) se font en mémoire à partir de ces données.
+The program loads a JSON file containing 16 superheroes with their powerstats and appearance. All operations (sort, filter, quiz) are performed in-memory from this data.
 
-Un héros est défini comme une simple entrée JSON :
+A hero is defined as a simple JSON entry:
 
 ```json
 {
@@ -81,42 +81,42 @@ Un héros est défini comme une simple entrée JSON :
 }
 ```
 
-Ajouter un héros = ajouter une entrée dans `DATA.json`. Le programme fait le reste.
+Add a hero = add an entry in `DATA.json`. The program handles the rest.
 
 ---
 
 ## Menu
 
-| Option | Fonction |
+| Option | Function |
 |--------|----------|
-| (0) | Vue simplifiée de la base |
-| (1) | Infos complètes par ID |
-| (2) | Infos complètes par nom |
-| (3) | Trier selon une powerstat |
-| (4) | Filtrer les héros |
-| (5) | Comparer deux héros |
-| (6) | Gérer les favoris |
-| (7) | Quiz : deviner le héros |
-| (8) | Liens externes |
-| (-1) | Quitter |
+| (0) | Simplified database view |
+| (1) | Full info by ID |
+| (2) | Full info by name |
+| (3) | Sort by a powerstat |
+| (4) | Filter heroes |
+| (5) | Compare two heroes |
+| (6) | Manage favorites |
+| (7) | Quiz: guess the hero |
+| (8) | External links |
+| (-1) | Quit |
 
 ---
 
 ## Stack
 
-`C` — uniquement la bibliothèque standard + [cJSON](https://github.com/DaveGamble/cJSON) (intégré).
+`C` — standard library only + [cJSON](https://github.com/DaveGamble/cJSON) (bundled).
 
-Compilation avec `gcc` :
+Build with `gcc`:
 ```bash
 ./build.sh
 ./launch.sh
 ```
 
-*Le binaire se trouve dans `build/main` (Linux) ou `build/main.exe` (Windows).*
+*The binary is located in `build/main` (Linux) or `build/main.exe` (Windows).*
 
 ---
 
-## Crédits
+## Credits
 
-Code, design et données par **SkylePaf** et **userremi0**.  
-Projet réalisé dans le cadre d'un TP de L1.
+Code, design and data by **SkylePaf** and **userremi0**.  
+Project built as part of a L1 coursework.
