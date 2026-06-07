@@ -5,6 +5,8 @@
 **Search · Sort · Filter · Compare · Favorites · Quiz**  
 Built entirely in C — no framework, no external database.
 
+*Built in mid 2026.*
+
 *L1 project built with **userremi0**.*
 
 ---
