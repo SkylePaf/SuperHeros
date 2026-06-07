@@ -120,3 +120,4 @@ Build with `gcc`:
 
 Code, design and data by **SkylePaf** and **userremi0**.  
 Project built as part of a L1 coursework.
+*Built in mid 2026.*
